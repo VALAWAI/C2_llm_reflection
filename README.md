@@ -6,7 +6,7 @@ This C2 component generates simple reflections for the Social Robots VALAWAI app
 
 A reflection is a short text used to control other components.
 Specifically, this component generates reflections on the dialogue messages it receives and on a list of values modeled as text and fixed in the component configuration.
-In the future it will can be possible to explore scenarios with value preferences that vary over time and depend on the interlocutor.
+In the future it will be possible to explore scenarios with value preferences that vary over time and depend on the interlocutor.
 
 Modeling values as text is justified in the social robots application for two reasons.
 First, in the social robots application the chosen scenario is the home environment, where the values are often expressed in the form of rules, such as "do not smoke in the house".
@@ -17,11 +17,11 @@ Second, the values are modeled as text because the component uses a large langua
 If on one hand the home environment reduces the stakes of the system behaviour, on the other hand it is a complex environment, where the system must be able to deal with a wide range of situations and complex, unstructured interactions.
 Expressing values as text enables the system to understand very complex situations and interactions, thanks to the underlying large language model.
 
-The choice of using text also to influence the system behaviour is a consequence of the choice of using a large language model as the C1 dialogue manager.
+The choice of using text to influence the system behaviour is a consequence of the choice of using a large language model as the C1 dialogue manager.
 In the future, it will be necessary to study the impact of this choice on the system behaviour, and explore alternative approaches if necessary.
 
 The component runs in a _Docker_ container, and communicates with a _RabbitMQ_ message broker.
-As a large language model it supports _OpenAi_ chat models; in the future, support will be added for the _HuggingFace_ models.
+As a large language model it supports _OpenAI_ chat models; in the future, support will be added for the _HuggingFace_ models.
 
 ## Data Flow
 
@@ -74,4 +74,4 @@ The component is configurable with the following environment variables, with the
 - MODEL_NAME (`gpt-3.5-turbo`) The name of the model to use.
 - PROMPT (None) The prompt to use for the response generation, if not provided a default prompt is used.
 - VALUES (None) The values to use for the response generation, each on a new line, if not provided a default values are used.
-- OPENAI_API_KEY (None) The API key for the OpenAi services.
+- OPENAI_API_KEY (None) The API key for the OpenAI services.
